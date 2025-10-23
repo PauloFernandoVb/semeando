@@ -2,6 +2,9 @@
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 
+const homeRoute = require('./routes/homeRoute');
+const usuarioRoute = require("./routes/usuarioRoute");
+
 const app = express();
 //configurando a nossa pasta public como o nosso repositorio de arquivos estáticos (css, js, imagens)
 app.use(express.static(__dirname + "/public"))
@@ -21,6 +24,9 @@ app.use(expressLayouts);
 //login let auth = new AuthMiddleware();
 // app.use(auth.verificarUsuarioLogado);
 
+
+app.use('/', homeRoute)
+app.use("/usuarios", usuarioRoute);
 
 //ponto de inicio do nosso servidor web
 const server = app.listen('5000', function() {

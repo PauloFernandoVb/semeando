@@ -2,61 +2,54 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("btnCadastrar").addEventListener("click", cadastrar);
 
-    function limparValidacao() {
-        document.getElementById("usuarioNome").style["border-color"] = "#ced4da";
-        document.getElementById("usuarioEmail").style["border-color"] = "#ced4da";
-        document.getElementById("usuarioSenha").style["border-color"] = "#ced4da";
-        document.getElementById("usuarioPerfil").style["border-color"] = "#ced4da";
-    }
+    function cadastrar(){
+        let email = document.getElementById("UsuarioEmail").value;
+        let nome = document.getElementById("UsuarioNome").value;
+        let senha = document.getElementById("UsuarioSenha").value;
+        let ativo = document.getElementById("UsuarioAtivo").value;
+        let perfil = document.getElementById("UsuarioPerfil").checked;
 
-    function cadastrar() {
-        limparValidacao();
-        let nome = document.querySelector("#usuarioNome").value;
-        let email = document.querySelector("#usuarioEmail").value;
-        let senha = document.querySelector("#usuarioSenha").value;
-        let perfil = document.querySelector("#usuarioPerfil").value;
-        let ativo = document.querySelector("#usuarioAtivo").checked;
-
-        let listaErros = [];
-        if(nome == "") {
-            listaErros.push("usuarioNome");
+        let listaErros=[];
+        if(email==""){
+            listaErros.push("UsuarioEmail");
         }
-        if(email == "") {
-            listaErros.push("usuarioEmail");
+        if(nome==""){
+            listaErros.push("UsuarioNome");
         }
-        if(senha == "") {
-            listaErros.push("usuarioSenha");
+        if(senha==""){
+            listaErros.push("UsuarioSenha");
+        }if(ativo==""){
+            listaErros.push("UsuarioAtivo");
         }
-        if(perfil == 0) {
-            listaErros.push("usuarioPerfil");
+        if(perfil==""){
+            listaErros.push("UsuarioPerfil");
         }
 
-        if(listaErros.length == 0) {
-            //enviar ao backend com fetch
-
-            let obj = {
-                nome: nome,
-                email: email,
-                senha: senha,
-                ativo: ativo,
-                perfil: perfil,
+        if(listaErros.length==0){
+            //se tiver tudo prenchido cria o obj para stringficar
+            let obj={
+                nome:nome,
+                email:email,
+                senha:senha,
+                ativo:ativo,
+                perfil:perfil
             }
 
-            fetch("/usuarios/cadastrar", {
+            fetch("/usuarios/cadastrar",{
                 method: 'POST',
-                body: JSON.stringify(obj),
-                headers: {
-                    "Content-Type": "application/json",
+                body:JSON.stringify(obj),
+                headers:{
+                    "Content-Typer":"application/json",
                 }
             })
-            .then(r=> {
+            .then(r=>{
                 return r.json();
             })
-            .then(r=> {
-                if(r.ok) {
-                    window.location.href="/usuarios";
-                }   
-                else {
+            .then(r=>{
+                if(r.ok){
+                    window.location.href="./usuarios";
+                }
+                else{
                     alert(r.msg);
                 }
             })
@@ -69,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             alert("Preencha corretamente os campos indicados!");
         }
+
     }
 
 })
