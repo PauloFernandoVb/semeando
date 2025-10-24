@@ -1,4 +1,4 @@
-<script src="/js/usuarios/cadastrar.js"></script>
+
 <div class="container">
     <h1>Cadastro de Usuários</h1>
     <div>
@@ -31,9 +31,10 @@
                     <label for="usuarioPerfil" class="form-label">Perfil:</label>
                     <select class="form-control" id="usuarioPerfil" name="usuarioPerfil">
                         <option selected value="0">Selecione...</option>
-                        <% for(let i = 0; i<listaPerfil.length; i++) { %>
+                        <!-- <% for(let i = 0; i<listaPerfil.length; i++) { %>
                             <option value="<%= listaPerfil[i].perfilId %>"><%= listaPerfil[i].perfilDescricao %></option>
-                        <% } %>
+                        <% } %> -->
+                        <!--FAZER A CHAMADO NO BANCO PARA ESSA PARTE AQUI-->
                     </select>
                 </div>
             </div>
@@ -52,3 +53,5 @@
         </div>
     </div>
 </div>
+
+<script src="/js/usuarios/cadastrar.js"></script>

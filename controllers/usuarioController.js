@@ -4,7 +4,7 @@ const UsuarioModel= require("../models/usuarioModel")
 class UsuarioController{
         async cadastroView(req, resp){
 
-        resp.render("usuarios/cadastro", {listaPerfil: listaPerfil});
+        resp.render("usuarios/cadastro", );
     }
 
     async cadastrar(req,resp){
@@ -35,4 +35,4 @@ class UsuarioController{
     }
 }
 
-module.exports=UsuarioController
+module.exports=UsuarioController;
