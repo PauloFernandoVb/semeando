@@ -1,0 +1,82 @@
+<script src="/js/produto/admProduto.js"></script>
+<div class="d-flex">
+    <aside class="sidebar d-flex flex-column">
+        <ul class="nav flex-column flex-grow-1">
+            <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fa-solid fa-house fa-fw"></i> Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/produtos"><i class="fa-solid fa-boxes-stacked fa-fw"></i> Produtos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/servicos"><i class="fa-solid fa-list fa-fw"></i> Serviços</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-wrench fa-fw"></i> Equipamentos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/marcas"><i class="fa-solid fa-tags fa-fw"></i> Marcas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-user fa-fw"></i> Usuários</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-users fa-fw"></i> Perfis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/"><i class="fa-solid fa-cart-shopping fa-fw"></i> Loja</a>
+            </li>
+        </ul>
+    </aside>
+    <!--conteudo principal-->
+    <div class="flex-grow-1 p-4">
+        <h1>Cadastro de produtos</h1>
+        <form action="">
+            <div class="form-group">
+                <label for="">Nome do Produto</label>
+                <input id="nomeProduto" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Preco do Produto para Venda</label>
+                <input id="precoProduto" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Quantidade</label>
+                <input id="qntProduto" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Descriçao do Produto</label>
+                <input id="descProduto" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="selMarca">Marca</label>
+                <select class="form-control" id="selMarca">
+                    <option value="0">--Selecione--</option>
+                    <% for(let i=0; i<listarMarcas.length; i++) { %>
+                        <option value="<%=listarMarcas[i].idMarca%>">
+                            <%= listarMarcas[i].nomeMarca %>
+                        </option>
+                        <% } %>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="selTipo">Tipo do Produto</label>
+                <select class="form-control" id="selTipo">
+                    <option value="0">--Selecione--</option>
+                    <% for(let i=0; i<lista.length; i++) { %>
+                        <option value="<%= lista[i].idTipo %>">
+                            <%= lista[i].tipoDesc %>
+                        </option>
+                        <% } %>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Preco do Produto na compra</label>
+                <input id="precoProdutoC" class="form-control" type="text">
+            </div>
+            <div class="form-group mt-2">
+                <button type="button" class="btn btn-primary" id="btnCadastrar">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</div>

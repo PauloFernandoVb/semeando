@@ -1,0 +1,66 @@
+<div class="d-flex">
+    <aside class="sidebar d-flex flex-column">
+        <ul class="nav flex-column flex-grow-1">
+            <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fa-solid fa-house fa-fw"></i> Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/produtos"><i class="fa-solid fa-boxes-stacked fa-fw"></i> Produtos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/servicos"><i class="fa-solid fa-list fa-fw"></i> Serviços</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-wrench fa-fw"></i> Equipamentos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/marcas"><i class="fa-solid fa-tags fa-fw"></i> Marcas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-user fa-fw"></i> Usuários</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-users fa-fw"></i> Perfis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/"><i class="fa-solid fa-cart-shopping fa-fw"></i> Loja</a>
+            </li>
+        </ul>
+    </aside>
+    <!--conteudo principal-->
+    <div class="flex-grow-1 p-4">
+        <h1>Servicos</h1>
+        <div>
+            <a class="btn btn-primary" href="/servicos/cadastrar"><i class="fas fa-plus"></i> Cadastrar</a>
+        </div>
+
+        <div class="table-responsive" style="margin-top: 15px;">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Nome</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% lista.map(function(value, index) { %>
+                        <tr>
+                            <td><%= value.idServico%></td>
+                            <td><%= value.descServico%></td>
+                            <td><%= value.precoServico%></td>
+                            <td><%= value.nomeServico%></td>
+                            <td><button class="btn btn-warning btn-sm">Editar</button>
+                            <button class="btn btn-danger btn-sm">Excluir</button></td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </div>
+</div>
