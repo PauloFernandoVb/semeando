@@ -12,6 +12,7 @@ const routerMarca=require("./routes/marcaRoute");
 const routerTipo=require("./routes/tipoRoute");
 const routerServico=require("./routes/servicoRoute");
 const routerSobreNos=require("./routes/sobreNos");
+const routerContato=require("./routes/contatoRoute");
 
 //===========================//
 
@@ -33,6 +34,8 @@ server.use('/marcas',routerMarca);
 server.use("/tipos",routerTipo);
 server.use("/servicos",routerServico);
 server.use("/sobreNos",routerSobreNos);
+server.use("/contato",routerContato);
+
 //===========================//
 
 // FAZER ADM PRODUTO FAZER EJS DO PRODUTO E ALTERAR MARCA E PRODUTO TAMBEM (UPDATE E DELETE)

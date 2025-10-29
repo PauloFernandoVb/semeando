@@ -69,49 +69,51 @@
     <!--produtos-->
   <hr>
 
-  <div class="container my-6">
+  <div class="container my-6"> <!-- ADICIONADO: container para centralizar todo o conteúdo e aplicar margens horizontais e verticais -->
 
     <!-- TRIGO -->
-    <div class="row align-items-center mb-5"> 
+    <div class="row align-items-center mb-5"> <!-- MANTEVE estrutura row, mas removeu "featurette" e "justify-content-center" -->
       <div class="col-md-7">
-        <h2 class="fw-bold text-end" style="margin-right: 20px; color: #36973f;">Trigo</h2>
-        <p class="lead text-start"> 
+        <h2 class="fw-bold text-end" style="margin-right: 20px;">Trigo</h2> <!-- ALTERADO: usou fw-bold  em vez de fw-normal e adicionou margem direita com style -->
+        <p class="lead text-start"> <!-- ALTERADO: o texto agora está alinhado à esquerda, antes era text-end -->
           O trigo é uma gramínea e um dos cereais mais consumidos no mundo, cultivado em todo o globo e usado principalmente para fazer farinha, que serve de base para pães, massas e outros alimentos.
         </p>
       </div>
       <div class="col-md-5">
         <img src="/img/trigo.jpg" class="img-fluid rounded w-20" style="width: 70%; height: auto; margin-left: auto; margin-right: auto; display: block;" alt="Trigo">
+        <!-- ALTERADO: adicionou classe "rounded" e aplicou estilos inline  -->
       </div>
     </div>
 
     <hr>
 
     <!-- SOJA -->
-    <div class="row align-items-center mb-5 flex-row-reverse"> 
+    <div class="row align-items-center mb-5 flex-row-reverse"> <!-- ALTERADO: usou "flex-row-reverse" em vez de "order-md-2" e "order-md-1" -->
       <div class="col-md-7">
-        <h2 class="fw-bold text-start" style="color: #36973f;">Soja</h2> 
+        <h2 class="fw-bold text-start">Soja</h2> <!-- ALTERADO: fw-bold e alinhamento à esquerda -->
         <p class="lead text-start">
           A soja, também conhecida como feijão-soja e feijão-chinês, é uma planta pertence à família Fabaceae, família esta que compreende também plantas como o feijão, a lentilha e a ervilha.
         </p>
       </div>
       <div class="col-md-5">
         <img src="/img/soja.jpg" class="img-fluid rounded w-20" style="width: 70%; height: auto; margin-left: auto; margin-right: auto; display: block;" alt="Soja">
+        <!-- IGUAL AO CASO DO TRIGO: imagem centralizada e redimensionada -->
       </div>
     </div>
 
     <hr>
 
     <!-- SORGO -->
-    <div class="row align-items-center mb-5"> 
+    <div class="row align-items-center mb-5"> <!-- MANTEVE estrutura padrão (sem inversão de ordem) -->
       <div class="col-md-7">
-        <h2 class="fw-bold text-end" style="margin-right: 25px; color:#36973f;">Sorgo</h2>
+        <h2 class="fw-bold text-end" style="margin-right: 25px;">Sorgo</h2> <!-- ALTERADO: fw-bold e margem direita ajustada -->
         <p class="lead text-start">
           O sorgo é um género botânico pertencente à família Poaceae de cerca de 30 espécies de gramíneas originárias de regiões tropicais e subtropicais de todos os continentes, além do sudoeste do Pacífico e Australásia. É cultivada em climas quentes em todo o mundo.
         </p>
       </div>
       <div class="col-md-5">
         <img src="/img/sorgo.jpg" class="img-fluid rounded w-20" style="width: 70%; height: auto; margin-left: auto; margin-right: auto; display: block;" alt="Sorgo">
-        
+        <!-- IGUAL AO CASO DAS OUTRAS IMAGENS -->
       </div>
     </div>
 
@@ -120,8 +122,8 @@
     <!-- MILHO -->
     <div class="row align-items-center mb-5 flex-row-reverse"> <!-- ALTERADO: usou flex-row-reverse (em vez de order-md-2/order-md-1) -->
       <div class="col-md-7">
-        <h2 class="fw-bold text-start" style="color: #36973f;">Milho</h2> <!-- ALTERADO: fw-bold -->
-        <p class="lead text-start" >
+        <h2 class="fw-bold text-start">Milho</h2> <!-- ALTERADO: fw-bold -->
+        <p class="lead text-start">
          O milho é um cereal cultivado em grande parte do mundo e extensivamente utilizado como alimento humano ou para ração animal devido às suas qualidades nutricionais.
         </p>
       </div>
